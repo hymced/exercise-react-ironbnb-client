@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CreateApartment.css'
 
 const CreateApartment = ({callbackGetApartments}) => {
 
@@ -33,22 +34,24 @@ const CreateApartment = ({callbackGetApartments}) => {
     }
 
     return <>
-        <h1>CreateApartment</h1>
-        <form onSubmit={handleSubmit}>
-            <label>
-                Title:
-                <input type="text" name="title" value={title} onChange={(e) => {setTitle(e.target.value)}}/>
-            </label>
-            <label>
-                pricePerDay:
-                <input type="text" name="pricePerDay" value={pricePerDay} onChange={(e) => {setPricePerDay(e.target.value)}}/>
-            </label>
-            <label>
-                img:
-                <input type="text" name="img" value={img} onChange={(e) => {setImg(e.target.value)}}/>
-            </label>
-            <button type="submit"> Create </button>
-        </form>
+        <section className="CreateApartment">
+            <h1>CreateApartment</h1>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Title:
+                    <input type="text" name="title" value={title} onChange={(e) => {setTitle(e.target.value)}}/>
+                </label>
+                <label>
+                    pricePerDay:
+                    <input type="text" name="pricePerDay" value={pricePerDay} onChange={(e) => {setPricePerDay(e.target.value)}}/>
+                </label>
+                <label>
+                    img:
+                    <input type="text" name="img" value={img} onChange={(e) => {setImg(e.target.value)}}/>
+                </label>
+                <button type="submit"> Create </button>
+            </form>
+        </section>
     </>
 }
 

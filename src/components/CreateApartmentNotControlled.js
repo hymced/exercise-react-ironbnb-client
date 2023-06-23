@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './CreateApartment.css'
 
 const CreateApartment = ({callbackGetApartments}) => {
 
@@ -24,22 +25,24 @@ const CreateApartment = ({callbackGetApartments}) => {
     }
 
     return <>
-        <h1>CreateApartmentNotControlled</h1>
-        <form onSubmit={handleSubmit}>
-            <label>
-                Title:
-                <input type="text" name="title" />
-            </label>
-            <label>
-                pricePerDay:
-                <input type="text" name="pricePerDay" />
-            </label>
-            <label>
-                img:
-                <input type="text" name="img" />
-            </label>
-            <button type="submit"> Create </button>
-        </form>
+        <section className="CreateApartment">
+            <h1>CreateApartmentNotControlled</h1>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Title:
+                    <input type="text" name="title" />
+                </label>
+                <label>
+                    pricePerDay:
+                    <input type="text" name="pricePerDay" />
+                </label>
+                <label>
+                    img:
+                    <input type="text" name="img" />
+                </label>
+                <button type="submit"> Create </button>
+            </form>
+        </section>
     </>
 }
 
