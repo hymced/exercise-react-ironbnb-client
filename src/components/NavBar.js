@@ -3,12 +3,13 @@ import './NavBar.css'
 
 const NavBar = () => {
     return <>
-        <div className="NavBar">
-            <NavLink to="/">HomePage</NavLink>
-            <NavLink to="/apartments">ApartmentsList</NavLink>
+        <nav className="NavBar">
+            {/* use end prop because links stay active when they are subsets of other links */}
+            <NavLink end to="/">HomePage</NavLink>
+            <NavLink end to="/apartments">ApartmentsList</NavLink>
             <NavLink to="/apartments/create">CreateApartment</NavLink>
             <NavLink to="/apartments/create2">CreateApartmentNotControlled</NavLink>
-        </div>
+        </nav>
     </>
 }
 
