@@ -6,6 +6,7 @@ import HomePage from './components/HomePage';
 import ApartmentsList from './components/ApartmentsList';
 import ApartmentDetails from './components/ApartmentDetails';
 import CreateApartment from './components/CreateApartment';
+import CreateApartmentNotControlled from './components/CreateApartmentNotControlled';
 
 import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -29,7 +30,7 @@ function App() {
       })
       .catch(e => console.log(e))
   }
-  
+
   const renderApartmentsOrLoading = () => {
     if (apartments.length > 0) {
       return <ApartmentsList apartments={apartments} />
@@ -48,7 +49,8 @@ function App() {
       <Routes>
       <Route path="/" element={<HomePage />}></Route>
       <Route path="/apartments" element={renderApartmentsOrLoading()}></Route>
-      <Route path="/apartments/create" element={<CreateApartment callbackGetApartments={getApartments} />}></Route>
+      {/* <Route path="/apartments/create" element={<CreateApartment callbackGetApartments={getApartments} />}></Route> */}
+      <Route path="/apartments/create" element={<CreateApartmentNotControlled callbackGetApartments={getApartments} />}></Route>
       <Route path="/apartments/:apartmentId" element={<ApartmentDetails />}></Route>
       </Routes>
     
