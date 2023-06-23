@@ -5,7 +5,7 @@ const ApartmentsList = ({apartments}) => {
         {apartments.map(apartment => {
             return <div key={apartment._id}>
             Title: {apartment.title} <br />
-            pricePerDay: {apartment.pricePerDay} <br />
+            Price/day: {apartment.pricePerDay} <br />
             <a href={"/apartments/"+apartment._id}>View Details</a>
             <br /><br />
             </div>

@@ -24,7 +24,7 @@ const ApartmentDetails = () => {
         }
         <div key={apartment._id}>
             Title: {apartment.title} <br />
-            pricePerDay: {apartment.pricePerDay} <br />
+            Price/day: {apartment.pricePerDay} <br />
         </div>
     </>
 }
