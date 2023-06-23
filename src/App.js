@@ -49,8 +49,8 @@ function App() {
       <Routes>
       <Route path="/" element={<HomePage />}></Route>
       <Route path="/apartments" element={renderApartmentsOrLoading()}></Route>
-      {/* <Route path="/apartments/create" element={<CreateApartment callbackGetApartments={getApartments} />}></Route> */}
-      <Route path="/apartments/create" element={<CreateApartmentNotControlled callbackGetApartments={getApartments} />}></Route>
+      <Route path="/apartments/create" element={<CreateApartment callbackGetApartments={getApartments} />}></Route>
+      <Route path="/apartments/create2" element={<CreateApartmentNotControlled callbackGetApartments={getApartments} />}></Route>
       <Route path="/apartments/:apartmentId" element={<ApartmentDetails />}></Route>
       </Routes>
     
